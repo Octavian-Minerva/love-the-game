@@ -2,7 +2,7 @@
 @font-face{font-family:Oswald;src:url(fonts/Oswald.ttf) format('truetype');font-weight:200 700;font-display:swap}
 :root{--ink:#1d1d1f;--bg:#fbf8f3;--paper:#fff;--line:#e4ddd2;--accent:#c2410c;--exit:#b3261e;--dark:#1d1d1f;--soft:#f3ede3;--calm:#3f6f5a;--calmbg:#eef3ef;--maroon:#6d1a36;--blue:#2c6fb7}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
-body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;font-size:17px}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:transparent;line-height:1.55;font-size:17px}
 a{color:inherit}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
 .skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;z-index:99;background:#fff;padding:10px}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
@@ -19,6 +19,10 @@ nav.main a{text-decoration:none;padding:8px 2px}nav.main a[aria-current]{font-we
 .helpbar a{text-decoration:none}.helpbar b{font-weight:800}
 .stripe{display:flex;height:6px}.stripe i{flex:1;background:var(--maroon)}.stripe i+i{background:var(--blue)}
 main{display:block}
+html{background:linear-gradient(to right,var(--maroon) 50%,var(--blue) 50%) fixed}
+html:has(body.help){background:linear-gradient(to right,#5b6770 50%,#7d8f86 50%) fixed}
+.frame{max-width:1280px;margin:0 auto;background:var(--bg);min-height:100vh;box-shadow:0 0 40px rgba(0,0,0,.25)}
+body.help .frame{background:#f6f3ee}
 .photo{display:block;width:100%;height:auto;border-radius:16px;object-fit:cover;background:#e9e2d6}
 .photo.wide{aspect-ratio:21/9}.photo.std{aspect-ratio:3/2}
 .photoband{padding:0 0 52px}
@@ -61,7 +65,7 @@ section.band{padding:52px 0;border-top:1px solid var(--line)}section.band.soft{b
 .stat{background:var(--dark);color:#fff;border-radius:14px;padding:26px}.stat p{margin:10px 0 0;font-size:18px}.stat .cite{font-size:14px;color:#d8d2c9}.stat .big{font-family:Oswald,system-ui,sans-serif;font-size:64px;font-weight:700;color:#ffb38a;line-height:1}
 .pill{display:inline-block;background:var(--soft);border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:13px;font-weight:700;white-space:nowrap}
 /* Get help: quieter treatment */
-body.help{background:#f6f3ee}body.help .hero{padding:48px 0 32px}
+body.help .hero{padding:48px 0 32px}
 .safety{background:#26323a;color:#fff;font-size:15px;padding:10px 0}
 .hdoors{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
 .hdoor{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px;scroll-margin-top:90px;display:flex;flex-direction:column}
