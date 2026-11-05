@@ -1,4 +1,4 @@
-# Love the Game, Respect Everyone
+# Not Our Game: Love the Game, Respect Everyone
 
 A campaign to prevent domestic and family violence on State of Origin nights.
 
